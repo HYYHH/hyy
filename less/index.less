@@ -1,0 +1,263 @@
+// 导入变量
+@import "variable.less";
+// 导入函数
+@import "maxin.less";
+
+// 头部
+#header{
+    .row{
+        >div{
+            border-right: 1px solid #ccc;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            &:last-child{
+                border-right: none;
+            }
+            >a{
+                color: @a-color;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+}
+
+//导航
+.navbar-default{
+    background-color: #fff;
+    margin-bottom: 0;
+    .navbar-header{
+        // 手机显示时 导航栏的按钮要居中
+        .navbar-toggle{
+            margin-top: 23px;
+        }
+        .navbar-brand{
+            height: 80px;   
+            line-height: 50px;
+            i{
+                font-size: 30px;
+                &.icon-icon{
+                 color: @main-color;
+                 &.icon-logo{
+                     color:#333;
+                 }
+            }
+
+            }
+            
+           
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+           
+            >li{
+                 &.active{
+                 >a{
+                    background-color: #fff;
+                    border-bottom:3px solid @main-color;
+                  }
+                    }
+                >a{
+                 height: 80px;
+                 line-height: 50px;
+                    &:hover{
+                    border-bottom:3px solid @main-color;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// 轮播图
+#slide{
+    background-color: pink;
+    .large-image{
+        display: block;
+        height: 410px;
+        background-position: center ;
+    }
+    .small-image{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+//网页特色
+#featrue{
+    padding: 40px 0;
+    .row{
+        >div{
+            margin-bottom: 10px;
+            .media{
+                >a{
+                    color:@a-color;
+                    text-decoration: none;
+                    &:hover{
+                        color: @main-color;
+
+                    }
+                }
+                @media(max-width:768px){
+                    >a{
+                        width: 220px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+//产品
+#products{
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    .container{
+           
+            li{
+                &.active{
+                    border-bottom: 3px solid #e92322;
+                }
+               a{
+                   border: none;
+                   color: #333;
+                   padding: 10px 15px;
+                   background-color: #f0f0f0;
+               }
+            }
+        }
+    }
+
+
+//立即预约
+#booking{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    .pull-left{
+           line-height: 60px;
+            height: 60px;
+            font-size: 16px;
+            >i{
+                float: left;
+            }
+            >span{
+                    color: #a94442;
+                }
+                >a{
+                    color: #a94442;
+                }
+            }
+    .pull-right{
+        line-height: 60px;
+        >a{
+            color: #337ab7;
+            text-decoration: none;
+    }
+}
+}
+
+//新闻
+#news{
+    padding-top: 40px;
+    .row{
+        .col-md-2{
+           >h4{
+            height: 40px;
+            position: relative;
+            border-bottom: 1px dashed @border-color;
+            text-align: center;
+            line-height: 40px;
+            &:after{
+                content: "";
+				display: block;
+                width: 10px;
+                height:10px;
+                border-radius: 50%;
+                border: 1px solid @border-color;
+                position: absolute;
+                right: -10px;
+                bottom: -5px;
+           }
+        }     
+        }
+        //标签
+        .col-md-1{
+            ul{
+            border-bottom: 0;
+            li{
+                text-align: center;
+                margin-bottom: 10px;
+                &.active{
+                    >a{
+                    background-color: @main-color;
+                }}
+                >a{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: @main-color;
+                    }
+                    >i{
+                   font-size: 30px;
+                   color: @border-color;
+                     }
+                }
+            }
+            }
+        }
+        //列表
+        .col-md-7{
+            .tab-content{
+                div{
+                    >ul{
+                        list-style: none;
+                        >li{
+                            height: 40px;
+                            a{
+                            line-height: 40px;
+                            color: #333;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//合作伙伴
+#partner{
+    margin: 40px 0;
+    .container{
+        h3{
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+        li{
+            width: 100px;
+            float: left;
+            a{
+                text-decoration: none;
+                i{
+                    font-size: 50px;
+                    color: #333;
+                }
+            }
+
+        }
+    }
+}
+}
